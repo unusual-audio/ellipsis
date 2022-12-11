@@ -23,10 +23,8 @@ EllipsisAudioProcessor::EllipsisAudioProcessor()
 #endif
 {
     
-    addParameter (drive = new juce::AudioParameterInt (
-        "drive", "Drive", MIN_DRIVE, MAX_DRIVE, DEFAULT_DRIVE));
-    addParameter (crossover = new juce::AudioParameterInt (
-        "crossover", "Crossover", MIN_CROSSOVER, MAX_CROSSOVER, DEFAULT_CROSSOVER));
+    addParameter (drive = new juce::AudioParameterInt ({"drive", 1}, "Drive", MIN_DRIVE, MAX_DRIVE, DEFAULT_DRIVE));
+    addParameter (crossover = new juce::AudioParameterInt ({"crossover", 1}, "Crossover", MIN_CROSSOVER, MAX_CROSSOVER, DEFAULT_CROSSOVER));
 }
 
 EllipsisAudioProcessor::~EllipsisAudioProcessor()
